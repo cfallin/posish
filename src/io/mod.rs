@@ -42,7 +42,7 @@ pub const ICANON: libc::tcflag_t = libc::ICANON;
 pub const ICANON: std::os::raw::c_uint = linux_raw_sys::general::ICANON;
 
 /// Re-export `PIPE_BUF`.
-#[cfg(all(libc, not(target_os = "wasi")))]
+#[cfg(all(libc, not(any(target_os = "wasi", target_os = "redox"))))]
 pub const PIPE_BUF: usize = libc::PIPE_BUF;
 
 /// Re-export `PIPE_BUF`.

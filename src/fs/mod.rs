@@ -192,7 +192,7 @@ pub type Statx = libc::statx;
 pub type Statx = linux_raw_sys::v5_4::general::statx;
 
 /// Re-export `UTIME_NOW` and `UTIME_OMIT`.
-#[cfg(libc)]
+#[cfg(all(libc, not(target_os = "redox")))]
 pub use libc::{UTIME_NOW, UTIME_OMIT};
 
 /// Re-export `UTIME_NOW` and `UTIME_OMIT`.

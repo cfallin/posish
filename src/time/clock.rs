@@ -15,13 +15,10 @@ use std::ptr;
 use {crate::zero_ok, std::mem::MaybeUninit};
 
 #[cfg(libc)]
-pub use libc::{timespec, UTIME_NOW, UTIME_OMIT};
+pub use libc::timespec;
 
 #[cfg(linux_raw)]
-pub use linux_raw_sys::{
-    general::timespec,
-    general::{UTIME_NOW, UTIME_OMIT},
-};
+pub use linux_raw_sys::general::timespec;
 
 /// `clockid_t`
 #[cfg(all(

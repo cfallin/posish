@@ -92,6 +92,7 @@ impl Errno {
     #[cfg(not(target_os = "freebsd"))]
     #[cfg(not(any(target_os = "ios", target_os = "macos")))]
     #[cfg(not(target_os = "wasi"))]
+    #[cfg(not(target_os = "redox"))]
     pub const HWPOISON: Errno = Errno(libc::EHWPOISON);
     pub const IDRM: Errno = Errno(libc::EIDRM);
     pub const ILSEQ: Errno = Errno(libc::EILSEQ);
@@ -255,6 +256,7 @@ impl Errno {
     #[cfg(not(target_os = "netbsd"))]
     pub const NOTRECOVERABLE: Errno = Errno(libc::ENOTRECOVERABLE);
     pub const NOTSOCK: Errno = Errno(libc::ENOTSOCK);
+    #[cfg(not(target_os = "redox"))]
     pub const NOTSUP: Errno = Errno(libc::ENOTSUP);
     pub const NOTTY: Errno = Errno(libc::ENOTTY);
     #[cfg(not(target_os = "netbsd"))]
@@ -297,6 +299,7 @@ impl Errno {
     #[cfg(not(target_os = "freebsd"))]
     #[cfg(not(any(target_os = "ios", target_os = "macos")))]
     #[cfg(not(target_os = "wasi"))]
+    #[cfg(not(target_os = "redox"))]
     pub const RFKILL: Errno = Errno(libc::ERFKILL);
     pub const ROFS: Errno = Errno(libc::EROFS);
     #[cfg(not(target_os = "wasi"))]
