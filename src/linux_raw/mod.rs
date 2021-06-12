@@ -15,7 +15,7 @@ use conv::{
     opt_c_str, opt_mut, opt_ref, out, owned_fd, ret, ret_c_int, ret_c_uint, ret_owned_fd,
     ret_usize, ret_void_star, slice_addr, slice_as_mut_ptr, socklen_t, umode_t, void_star,
 };
-use io_experiment::{BorrowedFd, OwnedFd};
+use io_lifetimes::{BorrowedFd, OwnedFd};
 use linux_raw_sys::{
     general::__kernel_sockaddr_storage,
     general::{

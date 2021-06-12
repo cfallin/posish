@@ -1,5 +1,5 @@
 use crate::fs::{FdFlags, OFlags};
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::io;
 #[cfg(libc)]
 use {

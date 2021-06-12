@@ -1,5 +1,5 @@
 use crate::zero_ok;
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{io, os::unix::ffi::OsStringExt, path::PathBuf};
 use unsafe_io::os::posish::AsRawFd;
 

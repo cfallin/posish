@@ -1,5 +1,5 @@
 use crate::{fs::CopyfileFlags, negative_err};
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{io, mem::MaybeUninit};
 use unsafe_io::os::posish::AsRawFd;
 

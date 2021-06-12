@@ -7,7 +7,7 @@ use crate::{
     path,
     time::Timespec,
 };
-use io_experiment::{AsFd, BorrowedFd, OwnedFd};
+use io_lifetimes::{AsFd, BorrowedFd, OwnedFd};
 #[cfg(all(
     libc,
     not(any(

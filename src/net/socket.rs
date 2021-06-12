@@ -1,4 +1,4 @@
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{
     io,
     mem::{size_of, MaybeUninit},

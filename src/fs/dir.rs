@@ -3,7 +3,7 @@
 #[cfg(all(libc, target_os = "android"))]
 use crate::fs::android::seekdir as libc_seekdir;
 use crate::fs::FileType;
-use io_experiment::{IntoFd, OwnedFd};
+use io_lifetimes::{IntoFd, OwnedFd};
 #[cfg(all(libc, not(target_os = "android")))]
 use libc::seekdir as libc_seekdir;
 #[cfg(not(any(
@@ -38,7 +38,7 @@ use {
 };
 #[cfg(linux_raw)]
 use {
-    io_experiment::{AsFd, AsFilelike},
+    io_lifetimes::{AsFd, AsFilelike},
     linux_raw_sys::general::linux_dirent64,
     std::ffi::CString,
     std::mem::size_of,

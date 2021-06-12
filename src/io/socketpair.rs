@@ -1,5 +1,5 @@
 #[cfg(linux_raw)]
-use io_experiment::FromFd;
+use io_lifetimes::FromFd;
 use std::{convert::TryInto, io, net::TcpStream};
 #[cfg(libc)]
 use {

@@ -1,4 +1,4 @@
-use io_experiment::OwnedFd;
+use io_lifetimes::OwnedFd;
 use bitflags::bitflags;
 
 #[cfg(libc)]

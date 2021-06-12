@@ -5,7 +5,7 @@ use crate::{
     path,
 };
 use bitflags::bitflags;
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{ffi::CStr, io};
 #[cfg(libc)]
 use {crate::zero_ok, std::mem::MaybeUninit};

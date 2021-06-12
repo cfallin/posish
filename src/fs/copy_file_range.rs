@@ -1,4 +1,4 @@
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{convert::TryInto, io, mem};
 #[cfg(libc)]
 use {crate::negone_err, std::ptr, unsafe_io::os::posish::AsRawFd};

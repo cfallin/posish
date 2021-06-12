@@ -2,7 +2,7 @@ use crate::{
     fs::{Mode, OFlags, ResolveFlags},
     path,
 };
-use io_experiment::{AsFd, BorrowedFd, OwnedFd};
+use io_lifetimes::{AsFd, BorrowedFd, OwnedFd};
 use std::{ffi::CStr, io};
 #[cfg(libc)]
 use {

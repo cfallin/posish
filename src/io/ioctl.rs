@@ -1,6 +1,6 @@
 #[cfg(not(target_os = "wasi"))]
 use crate::io::Termios;
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::io;
 #[cfg(libc)]
 use {crate::zero_ok, std::mem::MaybeUninit, unsafe_io::os::posish::AsRawFd};

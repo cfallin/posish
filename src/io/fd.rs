@@ -2,7 +2,7 @@
 
 #[cfg(all(libc, not(target_os = "wasi")))]
 use crate::negone_err;
-use io_experiment::{AsFd, BorrowedFd, OwnedFd};
+use io_lifetimes::{AsFd, BorrowedFd, OwnedFd};
 #[cfg(all(libc, not(any(target_os = "wasi", target_os = "fuchsia"))))]
 use std::ffi::OsString;
 use std::io;

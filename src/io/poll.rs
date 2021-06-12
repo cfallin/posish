@@ -1,5 +1,5 @@
 use bitflags::bitflags;
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 use std::{io, marker::PhantomData};
 #[cfg(libc)]
 use {crate::negone_err, std::convert::TryInto, unsafe_io::os::posish::AsRawFd};

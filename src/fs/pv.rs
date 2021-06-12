@@ -1,6 +1,6 @@
 //! Positioned *and* vectored I/O: `preadv` and `pwritev`.
 
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 #[cfg(all(
     libc,
     not(any(target_os = "android", target_os = "linux", target_os = "emscripten"))

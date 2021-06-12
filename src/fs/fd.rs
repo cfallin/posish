@@ -6,7 +6,7 @@ use crate::fs::Mode;
 // not implemented in libc for netbsd yet
 use crate::fs::StatFs;
 use crate::time::Timespec;
-use io_experiment::{AsFd, BorrowedFd};
+use io_lifetimes::{AsFd, BorrowedFd};
 #[cfg(all(
     libc,
     not(any(

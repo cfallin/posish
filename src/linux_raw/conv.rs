@@ -1,7 +1,7 @@
 //! System call arguments and return values are all `usize`. This module
 //! provides functions for converting into and out of `usize` values.
 
-use io_experiment::{BorrowedFd, OwnedFd};
+use io_lifetimes::{BorrowedFd, OwnedFd};
 use linux_raw_sys::{
     general::socklen_t,
     general::{__kernel_clockid_t, __kernel_loff_t, umode_t},
